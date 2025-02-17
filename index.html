@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        /* color*/
+        --background-color: hsl(47, 88%, 63%);
+        --card-background-color: hsl(0, 0%, 100%);
+        --card-title-color: hsl(0, 0%, 42%);
+        --card-body-color: hsl(0, 0%, 7%);
+
+        /* image url */
+      }
+
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+
+      @font-face {
+        font-family: "ExtraBold"; /* Specify the font name here */
+        src: url("./assets/fonts/static/Figtree-ExtraBold.ttf")
+          format("truetype"); /* Provide the correct path to your font file */
+      }
+
+      @font-face {
+        font-family: "Medium"; /* Specify the font name here */
+        src: url("./assets/fonts/static/Figtree-Medium.ttf") format("truetype"); /* Provide the correct path to your font file */
+      }
+
+      @font-face {
+        font-family: "Italic-VariableFont";
+        src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+          format("truetype"); /* Provide the correct path to your font file */
+      }
+
+      @font-face {
+        font-family: "VariableFont";
+        src: url("./assets/fonts/Figtree-VariableFont_wght.ttf")
+          format("truetype"); /* Specify format as truetype */
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: var(--background-color); /* Set background color */
+        color: var(--card-body-color); /* Set body text color */
+      }
+
+      /* Style for the card container */
+      .card {
+        background-color: var(--card-background-color);
+        border-radius: 20px;
+        border: 1px solid var(--card-body-color);
+        padding: 24px 24px;
+        box-shadow: 8px 8px hsl(0, 0%, 0%);
+        width: 360px;
+        /*
+        height: 522px;
+        */
+        display: flex;
+        flex-direction: column;
+        gap:24px;
+      }
+      .card:hover{
+        box-shadow: 16px 16px hsl(0, 0%, 0%);
+      }
+
+
+      /* Style for the card image */
+      .card > .article-img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .content{        
+        display: flex;
+        flex-direction: column;
+        align-items:start;
+        gap: 12px;
+      }
+
+      .category{
+        background-color: var(--background-color);
+        color: var(--card-body-color);
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-family: "ExtraBold";
+      }
+
+      .publish-date{
+        font-family: "Medium"; /* Set font style */
+        color: var(--card-body-color); /* Set text color */
+        font-size: 16px;
+        line-height: 150%;
+      }
+
+      .title{
+        font-family: "ExtraBold"; /* Add font style */
+        font-size: 24px; /* Add font size */
+        color: var(--card-body-color); /* Change text color */
+        line-height: 150%; /* Add line height for better readability */
+      }
+      .title:hover{
+        
+        color: var(--background-color); /* Change text color on hover */
+      }
+
+      /* Added styles for description text */
+      .discription {
+        font-family: "Medium"; /* Add font style */
+        color: var(--card-title-color); /* Set text color */
+        font-size: 14px; /* Set font size */
+        line-height: 150%; /* Add line height for better readability */
+      }
+
+      .author{        
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 129px;
+        height: 32px;
+        font-family: "ExtraBold";
+        font-size: 14px;
+
+      }
+      .author-img{
+        width: 32px; /* Specify width in pixels */
+        height: 32px; /* Set height to auto for proper aspect ratio */
+      }
+
+      @media screen and (max-width: 375px) {
+        body{
+          padding: 20px;
+        }
+
+        .card {
+          width: 100%; /* Ensure card takes full width on small screens */
+          padding: 16px; /* Adjust padding for smaller screens */
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <!--       
+      --card-background-image : url('./assets/images/illustration-article.svg');
+      --card-user-image : url('./assets/images/image-avatar.webp');  
+    -->
+    
+    <div class="card">
+
+      <img class="article-img" src="./assets/images/illustration-article.svg" alt="Card Image"/>
+      
+      <div class="content">
+        <div class="category">Learning</div>
+        <div class="publish-date">Published 21 Dec 2023</div>
+        <div class="title">HTML & CSS foundations</div>
+        <div class="discription">These languages are the backbone of every website, defining structure, content, and presentation.</div>
+      </div>
+
+      <div class="author">
+        <img class="author-img" src="./assets/images/image-avatar.webp" alt="User Image" class="user-image" />
+        <div>Greg Hooper</div>
+      </div>
+
+    </div>
+  </body>
+</html>
